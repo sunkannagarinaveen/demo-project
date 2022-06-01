@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: naveenmavenproject 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: naveenmavenproject
+  template:
+    metadata:
+      labels:
+        app: naveenmavenproject 
+    spec:
+      containers:
+        - name: naveenmavenproject 
+          image: naveenapp.azurecr.io/naveenmavenproject
+          ports:
+          - containerPort: 80
